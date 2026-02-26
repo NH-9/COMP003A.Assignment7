@@ -7,10 +7,19 @@ namespace COMP003A.Assignment7
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Precalculus Exam 1 Scores Analyzer");
-            Console.WriteLine("----------------------------------");
+            Console.WriteLine("Student Score Analyzer");
+            Console.WriteLine("----------------------");
 
             List<double> scores = new List<double> { 9, 20, 24, 28, 30, 30, 37, 38, 43, 50};
+
+            Console.WriteLine("1. Display Values \n2. Show Total \n3. Show Average \n4. Exit\n");
+            char choice = '0';
+
+            while (choice != '4')
+            {
+                Console.Write("Enter Choice: ");
+                choice = char.Parse(Console.ReadLine());
+            }
 
             DisplayAll(scores);
             DisplayTotal(scores);
