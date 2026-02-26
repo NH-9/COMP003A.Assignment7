@@ -19,12 +19,34 @@ namespace COMP003A.Assignment7
             {
                 Console.Write("Enter Choice: ");
                 choice = char.Parse(Console.ReadLine());
-            }
 
-            DisplayAll(scores);
-            DisplayTotal(scores);
-            DisplayAverage(scores);
-            
+                switch (choice)
+                {
+                    case '1':
+                        {
+                            DisplayAll(scores);
+                            break;
+                        }
+
+                    case '2':
+                        {
+                            DisplayTotal(scores);
+                            break;
+                        }
+
+                    case '3':
+                        {
+                            DisplayAverage(scores);
+                            break;
+                        }
+
+                    case '4':
+                        {
+                            Console.WriteLine("Program Ended.");
+                            break;
+                        }
+                }
+            }   
         }
 
         static void DisplayAll(List<double> scores)
